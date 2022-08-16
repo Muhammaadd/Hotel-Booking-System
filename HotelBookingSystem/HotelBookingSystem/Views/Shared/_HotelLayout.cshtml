@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesom -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- reset -->
+    <link rel="stylesheet" href="~/css/reset.css" />
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="~/css/appstyle.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- start header -->
+    <header class="py-4 px-4 px-md-0 text-uppercase">
+      <ul
+        class="d-none d-md-flex p-0 m-0 align-items-center justify-content-center"
+      >
+        <li class="px-2 px-md-3 px-lg-4"><a href="">Home</a></li>
+        <li class="px-2 px-md-3 px-lg-4"><a href="">About</a></li>
+        <li class="px-2 px-md-3 px-lg-4"><a href="">Our Rooms</a></li>
+        <li class="px-2 px-md-3 px-lg-4">
+          <a href=""><img src="~/images/logo_md.png" alt="" /></a>
+        </li>
+        <li class="px-2 px-md-3 px-lg-4"><a href="">Reservation</a></li>
+        <li class="px-2 px-md-3 px-lg-4"><a href="">Blog</a></li>
+        <li class="px-2 px-md-3 px-lg-4"><a href="">Contact</a></li>
+      </ul>
+      <div class="d-flex d-md-none justify-content-between align-items-center">
+        <img src="~/images/logo_sm.png" alt="" />
+        <div class="d-flex align-items-center">
+          <span class="fw-bold">Menu</span>
+          <i id="barIcon" class="fa fa-bars fs-2 ms-3"></i>
+        </div>
+      </div>
+    </header>
+    <!-- End header -->
+    <!-- aside -->
+    <aside class="d-flex justify-content-end">
+      <div
+        class="p-3 d-md-none text-white bg-black vh-100 position-fixed top-0"
+      >
+        <div class="pb-4 d-flex align-items-center justify-content-end">
+          <span class="fw-bold fs-3">Menu</span>
+          <i id="closeIcon" class="fa fa-close fs-5 ms-2"></i>
+          <i class="fa fa-close fs-5 ms-2"></i>
+        </div>
+        <ul class="ps-3">
+          <li class="pb-3"><a class="text-secondary" href="">Home</a></li>
+          <li class="pb-3"><a class="text-secondary" href="">About</a></li>
+          <li class="pb-3"><a class="text-secondary" href="">Our Rooms</a></li>
+          <li class="pb-3">
+            <a class="text-secondary" href="">Reservation</a>
+          </li>
+          <li class="pb-3"><a class="text-secondary" href="">Blog</a></li>
+          <li class="pb-3"><a class="text-secondary" href="">Contact</a></li>
+        </ul>
+        <p class="ps-3 pt-4 text-secondary">Connect with Us</p>
+        <div class="ps-3 d-flex">
+          <i class="me-4 fa fa-twitter"></i>
+          <i class="me-4 fa fa-facebook"></i>
+          <i class="me-4 fa fa-instagram"></i>
+        </div>
+      </div>
+    </aside>
+    <!-- End aside -->
+    <!-- start main section -->
+    <section class="main-section text-white">
+        <h1 class="text-center fs-1 fw-bold mb-5">Welcome to Atlantis</h1>
+        <div class="d-flex justify-content-center">
+            <p class="text-center fs-sm-5 w-50">
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            </p>
+        </div>
+    </section>
+    <!-- End main section -->
+    
+    <!-- Search Nav -->
+    <partial name="_SearchNav"/>
+    <!-- End Search Nav -->
+    <!-- Render Body -->
+    <div id="RenderBody">
+    @RenderBody()
+    </div>
+    <!-- Render Body  -->
+
+    <!-- Start footer -->
+    <footer class="pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-md-start col-md-5">
+                    <img src="~/images/logo_sm.png" alt="">
+                    <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, fugiat laudantium fugit ex accusamus similique a perspiciatis quos rep</p>
+                    <a href="">Learn More</a>
+                </div>
+                <div class="col-12 col-md-7" >
+                    <p class="text-center text-md-start ps-2 p-0 mb-4 mt-5 mt-md-0 m-0 fw-bold fs-4">Blog</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-6 text-center text-md-start">
+                                <img class="w-50 mb-3" src="~/images/img_1.jpg" alt="">
+                                <div>
+                                    <p>River named Duden flows</p>
+                                    <p class="text-secondary">August 2,2017</p>
+                                    <p class="text-capitalize">a small river named duen flows by their place</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 text-center text-md-start">
+                                <img class="w-50 mb-3" src="~/images/img_2.jpg" alt="">
+                                <div>
+                                    <p>River named Duden flows</p>
+                                    <p class="text-secondary">August 2,2017</p>
+                                    <p class="text-capitalize">a small river named duen flows by their place</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer py-4 px-1 text-center">© 2017 uiCookies:Atlantis.<span class="fw-bold"> All Rights Reserved.Designed & Developed by uicookies.com Demo Images:</span> Unsplash.com & Pexels.com</div>
+    </footer>
+    <!-- End footer -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="~/scripts/Appscript.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+  </body>
+</html>

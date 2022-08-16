@@ -1,0 +1,16 @@
+﻿global using BookinSystemWebApi.Models;
+global using System.ComponentModel.DataAnnotations;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+global using BookinSystemWebApi.Repositories.BranchRepo;
+global using BookinSystemWebApi.Repositories.RoomRepo;
+global using BookinSystemWebApi.Services.BranchServ;
+global using BookinSystemWebApi.Services.RoomServ;
+global using BookinSystemWebApi.DTO;
+global using BookinSystemWebApi.Constants;
+global using System.Text.Json.Serialization;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.IdentityModel.Tokens;
+global using System.Text;

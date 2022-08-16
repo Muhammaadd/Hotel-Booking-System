@@ -1,0 +1,69 @@
+﻿@model List<AvailableRoomsViewModel>
+<style>
+    .customBtn{
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: var(--mainColor);
+    color: white;
+    }
+</style>
+<section class="branches-section p-5">
+    @if (ViewBag.ErrorsList!=null)
+    {
+        <ul style="text-align:center">
+        @foreach (string error in ViewBag.ErrorsList)
+        {
+            <li class="text-danger">@error</li>
+        }
+        </ul>
+    }
+    else if (ViewBag.Availability!=null)
+    {
+        <h2 class="text-danger text-center">@ViewBag.Availability</h2>
+    }
+    else
+    {   
+    @foreach (var room in Model)
+       {
+        <form asp-action="Index" asp-controller="Reserve">
+        <div class="p-3 mb-5 rounded-2" style="background-color: #c9e1e6;">
+          <div class="row">
+            <img class="col-3" src="~/images/slider_1.jpg" alt="">
+            <div class="col-7">
+              <h2 class="fw-bold">@room.BranchInfo.Name</h2>
+              <div class="d-flex">
+                <i class="fa fa-map-marker me-2"></i>
+                <p class="mb-2">@room.BranchInfo.address.ToString()</p>
+            </div>
+              <div class="d-flex mb-2">
+                <div class="d-flex me-5 align-items-center">
+                    <i class="fa fa-envelope me-2"></i>
+                    <p class="mb-0">@room.BranchInfo.ContactEmail</p>
+                </div>
+                <div class="d-flex align-items-center">
+                    <i class="fa fa-phone me-2"></i>
+                    <p class="mb-0">@room.BranchInfo.ContactNumber</p>
+                </div>
+            </div>
+            <div class="d-flex mb-2">
+                @foreach (var roomType in room.RoomsTypes)
+                        {
+                            <div class="d-flex me-4 align-items-center">
+                                <i class="fa fa-hotel me-2"></i>
+                                <p class="mb-0 fw-bold">@roomType.Value (@roomType.Key)</p>
+                            </div>          
+                        }
+          </div>
+          <p>Total Cost: <span class="text-danger fs-4">$@room.TotalCost</span></p>
+            </div>
+            <div class="col-2 align-self-center">
+                <button type="submit" class="customBtn">Reserve</button>
+            </div>
+          </div>
+        </div>
+        </form>
+       }
+    }
+
+</section>

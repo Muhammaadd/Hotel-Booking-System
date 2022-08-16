@@ -1,0 +1,11 @@
+﻿global using HotelBookingSystem.Models;
+global using Microsoft.AspNetCore.Mvc;
+global using System.Diagnostics;
+global using System.Net.Http.Headers;
+global using Newtonsoft.Json;
+global using HotelBookingSystem.Services.BranchServ;
+global using HotelBookingSystem.Services.RoomServ;
+global using System.ComponentModel.DataAnnotations;
+global using System.ComponentModel.DataAnnotations.Schema;
+global using HotelBookingSystem.ViewModels;
+global using HotelBookingSystem.Services.SearchServ;

@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Hotel Booking System\\HotelBookingSystem\\HotelBookingSystem\\HotelBookingSystem.csproj": {}
+  },
+  "projects": {
+    "E:\\Hotel Booking System\\HotelBookingSystem\\HotelBookingSystem\\HotelBookingSystem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Hotel Booking System\\HotelBookingSystem\\HotelBookingSystem\\HotelBookingSystem.csproj",
+        "projectName": "HotelBookingSystem",
+        "projectPath": "E:\\Hotel Booking System\\HotelBookingSystem\\HotelBookingSystem\\HotelBookingSystem.csproj",
+        "packagesPath": "C:\\Users\\MZ\\.nuget\\packages\\",
+        "outputPath": "E:\\Hotel Booking System\\HotelBookingSystem\\HotelBookingSystem\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\MZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

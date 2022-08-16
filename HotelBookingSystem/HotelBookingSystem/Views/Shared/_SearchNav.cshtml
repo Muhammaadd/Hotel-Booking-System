@@ -1,0 +1,42 @@
+﻿<!-- search nav -->
+        <div id="searchBtn" class="search cursor fs-4 px-4 py-1">
+            search
+        </div>
+        <div id="serchNav" class="search search-nav p-3">
+            <div class="d-flex align-items-center justify-content-between">
+                <p class="fw-bold fs-4">Search</p>
+                <i id="minimizeIcon" class="cursor fa fa-minus mb-2"></i>
+            </div>
+            <form data-ajax="true" asp-action="Index" asp-controller="Search">
+                <div class="mb-2">
+                  <label for="checkin" class="form-label">Check-in date</label>
+                  <input name="CheckInDate" required type="date" class="form-control" id="checkin" aria-describedby="">
+                </div>
+                <div class="mb-2">
+                    <label for="checkout" class="form-label">Check-out date</label>
+                    <input name="CheckOutDate" required type="date" class="form-control" id="checkout" aria-describedby="">
+                </div>
+                  <div class="mb-2">
+                    <label for="checkout" class="form-label">single</label>
+                    <input name="NumberOfSingleRooms" value="0" min="0" max="10" type="number" class="form-control" id="checkout" aria-describedby="">
+                </div>
+                <div class="mb-2">
+                  <label for="checkout" class="form-label">Double</label>
+                  <input name="NumberOfDoubleRooms" value="0" min="0" max="10" type="number" class="form-control" id="checkout" aria-describedby="">
+              </div>
+              <div class="mb-2">
+                <label for="checkout" class="form-label">suite</label>
+                <input name="NumberOfSuiteRooms" value="0" min="0" max="10" type="number" class="form-control" id="checkout" aria-describedby="">
+            </div>
+            <div class="mb-2">
+              <label for="checkout" class="form-label">Adults</label>
+              <input name="NumberOfAdults" required value="0" min="1" type="number" class="form-control" id="checkout" aria-describedby="">
+          </div>  
+                <button type="submit" class="btn btn-dark d-block w-100 mt-4">Search</button>
+              </form>
+        </div>
+        <!-- End search nav -->
+        @section Scripts {
+            <script src="~/lib/jquery/dist/jquery.min.js"></script>
+            <script src="~/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+        }

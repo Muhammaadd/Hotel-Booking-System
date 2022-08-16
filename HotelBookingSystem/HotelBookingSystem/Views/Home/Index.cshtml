@@ -1,0 +1,45 @@
+﻿@model List<Branch>
+@{
+    ViewData["Title"] = "Home Page";
+}
+    <section class="branches-section p-5">
+        <h2 class="text-center fw-bold mb-4">Our Branches</h2>
+        <div class="d-flex justify-content-center">
+            <p class="text-center fs-sm-5 w-50 mb-5">
+                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            </p>
+        </div>
+        <div class="container">
+            <div class="row">
+                @foreach (Branch branch in Model)
+                 {
+                    <div class="col-6 mb-5">
+                        <img class="w-100" src="~/images/slider_1.jpg" alt="">
+                        <div class="branch-card p-4 bg-white">
+                            <h4 class="fw-bold mb-3">@branch.Name</h4>
+                            <div class="d-flex">
+                                <i class="fa fa-map-marker me-2"></i>
+                                <p class="mb-4">@branch.address.ToString()</p>
+                            </div>
+                            <div class="d-flex">
+                                <div class="d-flex me-5">
+                                    <i class="fa fa-envelope me-2"></i>
+                                    <p class="mb-4">@branch.ContactEmail</p>
+                                </div>
+                                <div class="d-flex">
+                                    <i class="fa fa-phone me-2"></i>
+                                    <p class="mb-4">@branch.ContactNumber</p>
+                                </div>
+                            </div>
+                            <form asp-action="Index" asp-controller="Room" method="post">
+                                <input type="hidden" name="Id" value="@branch.Id">
+                                <input type="hidden" name="BranchName" value="@branch.Name">
+                                <button type="submit" >See Rooms</button>
+                            </form>
+                        </div>
+                    </div>
+                 }
+                
+            </div>
+        </div>
+    </section>
